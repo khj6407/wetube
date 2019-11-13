@@ -1,18 +1,13 @@
-const express = require("express");
+import express from "express";
 const app = express();
 const PORT = 4000;
 
-function handleListening() {
+const handleListening = () =>
   console.log(`Listening on: http://localhost:4000${PORT}`);
-}
 
-function handleHome(req, res) {
-  res.send("Hello from home");
-}
+const handleHome = (req, res) => res.send("Hello from ass");
 
-function handleProfile(req, res) {
-  res.send("You are on my profile");
-}
+const handleProfile = (req, res) => res.send("You are on my profile"); //arrow function
 
 app.get("/", handleHome);
 
